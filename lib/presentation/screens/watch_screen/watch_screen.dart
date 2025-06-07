@@ -101,16 +101,16 @@ class WatchScreen extends StatelessWidget {
           fontSize: 16.sp,
         ),
         onChanged: (value) {
-          // Debounce search to avoid too many API calls
-          // if (value.isEmpty) {
-          //   incomingMovieController.refreshMovies();
-          // } else {
-          incomingMovieController.searchMovies(value);
-          // }
+          // Debounce search to avoid too many API calls/
+          if (value.isEmpty) {
+            incomingMovieController.refreshMovies();
+          } else {
+            incomingMovieController.searchMovies(value);
+          }
         },
-        // onSubmitted: (value) {
-        //   incomingMovieController.searchMovies(value);
-        // },
+        onSubmitted: (value) {
+          incomingMovieController.searchMovies(value);
+        },
       ),
     );
   }

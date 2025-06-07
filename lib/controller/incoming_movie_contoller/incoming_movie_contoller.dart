@@ -117,10 +117,10 @@ class IncomingMovieController extends GetxController {
               movie.overview.toLowerCase().contains(query.toLowerCase()))
           .toList();
 
-      // incomingMovies.value = incomingMovies.value?.copyWith(
-      //   results: filteredMovies,
-      // );
-      filteredMovies.value = filteredItem;
+      incomingMovies.value = incomingMovies.value?.copyWith(
+        results: filteredMovies,
+      );
+      allMovies.value = filteredItem;
     } catch (error) {
       hasError.value = true;
       errorMessage.value = error.toString();

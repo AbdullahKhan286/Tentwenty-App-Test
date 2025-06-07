@@ -6,7 +6,7 @@ import '../../../config/utils/utils.dart';
 import '../../../model/movie_detail_model.dart';
 import '../../custom/custom_text/custom_text.dart';
 
-void _watchTrailer(MovieVideo trailer, BuildContext context) {
+void watchTrailer(MovieVideo trailer, BuildContext context) {
   // Show trailer options
   showModalBottomSheet(
     context: context,

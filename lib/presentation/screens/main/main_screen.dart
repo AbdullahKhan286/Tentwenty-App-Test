@@ -23,10 +23,10 @@ class MainScreen extends StatelessWidget {
       return IndexedStack(
         index: _currentIndex.value,
         children: [
-          Container(),
           WatchScreen(),
-          Container(),
-          Container(),
+          WatchScreen(),
+          WatchScreen(),
+          WatchScreen(),
         ],
       );
     });
